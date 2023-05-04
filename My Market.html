@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>My Market</title>
     <style>
         body{
             margin: 0;
             padding: 0;
-        
+        background-color: #171717;
 
         }
         .header{
@@ -18,6 +19,10 @@
             background-color: #DDD;
            
         }
+        main{
+          flex-wrap: wrap;
+        }
+
         .nav_bar{
             position: relative;
            top: 60%;
@@ -25,6 +30,26 @@
            margin-left: 5%;
             display: flex;
             
+        }/*
+        .nav_bar {
+            overflow: hidden;
+            background-color: #333;
+        }
+       
+        
+        .nav_bar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        */
+        .nav_bar a:hover {
+            background-color:#171717;
+            color: #DDD;
         }
         nav a{
             color: black;
@@ -81,7 +106,7 @@
   box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
   border-radius: 10px;
   background-color: #6B6ECC;
-  background: #DDD /*linear-gradient(45deg, #04051dea 0%, #2b566e 100%)*/;
+  background:#171717/*linear-gradient(45deg, #04051dea 0%, #2b566e 100%)*/;
 }
 
 .content {
@@ -126,7 +151,7 @@ button {
   width: 90%;
   text-shadow: 0px 4px 18px #2c3442;
 }
-.rating {
+/*.rating {
   display: flex;
   flex-direction: row-reverse;
   gap: 0.3rem;
@@ -209,10 +234,11 @@ button {
     transform: scale(1.2);
     fill: var(--fill);
   }
+}*/
+/*for rating only*/
+.fa fa-star  fa-3x {
+  color: yellow;
 }
-
-
-
     </style>
 </head>
 <body >
@@ -222,7 +248,7 @@ button {
             
             <a href="#">&nbsp;Home &nbsp;&nbsp;</a>
             <a href="#">&nbsp; Product &nbsp;&nbsp;</a>
-            <a href="#">&nbsp; Login &nbsp;</a>
+            <a href="Register.html">&nbsp; Register &nbsp;</a>
         
         </nav>
     </header>
@@ -245,7 +271,7 @@ button {
       <div class="title">Personal edition</div>
       <div class="price">$39.99</div>
       <div class="description"><img src="d5l8xhhl.png" alt=""></div>
-    </div>
+    </div><!--
     <div class="rating">
         <input value="star-1" name="star-radio" id="star-1" type="radio">
         <label for="star-1">
@@ -267,7 +293,7 @@ button {
         <label for="star-5">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
         </label>
-      </div>
+      </div>-->
       <button>
         Buy now
       </button>
@@ -278,67 +304,97 @@ button {
       <div class="price">$39.99</div>
       <div class="description"><img src="d5l8xhhl.png" alt=""></div>
     </div>
-    <div class="rating">
-        <input value="star-1" name="star-radio" id="star-1" type="radio">
-        <label for="star-1">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-2" type="radio">
-        <label for="star-2">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-3" type="radio">
-        <label for="star-3">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-4" type="radio">
-        <label for="star-4">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-5" type="radio">
-        <label for="star-5">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-      </div>
+  
       <button>
         Buy now
       </button>
 </div>
 <div class="card">
+  <div class="content">
+      <div class="title">Personal edition</div>
+      <div class="price">$39.99</div>
+      <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+    </div>
+   <!--   <div class="rating">
+        <input value="star-1" name="star-radio" id="star-1" type="radio">
+        <label for="star-1">
+          <span class="fa fa-star checked fa-3x "></span>
+          <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>-->
+       <!-- </label>
+        <input value="star-1" name="star-radio" id="star-2" type="radio">
+        <label for="star-2">
+          <span class="fa fa-star checked fa-3x "></span>
+               </label>
+        <input value="star-1" name="star-radio" id="star-3" type="radio">
+        <label for="star-3">
+          <span class="fa fa-star checked fa-3x "></span>
+              </label>
+        <input value="star-1" name="star-radio" id="star-4" type="radio">
+        <label for="star-4">
+          <span class="fa fa-star checked fa-3x "></span>
+                    </label>
+        <input value="star-1" name="star-radio" id="star-5" type="radio">
+        <label for="star-5">
+          <span class="fa fa-star  fa-3x "></span>
+                </label>
+      </div>-->
+      <button>
+        Buy now
+      </button>
+</div><br>
+<div class="card">
+  <div class="content">
+    <div class="title">Personal edition</div>
+    <div class="price">$39.99</div>
+    <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+  </div>
+</div>
+  <div class="card">
     <div class="content">
       <div class="title">Personal edition</div>
       <div class="price">$39.99</div>
       <div class="description"><img src="d5l8xhhl.png" alt=""></div>
     </div>
-    <div class="rating">
-        <input value="star-1" name="star-radio" id="star-1" type="radio">
-        <label for="star-1">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-2" type="radio">
-        <label for="star-2">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-3" type="radio">
-        <label for="star-3">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-4" type="radio">
-        <label for="star-4">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
-        <input value="star-1" name="star-radio" id="star-5" type="radio">
-        <label for="star-5">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" pathLength="360"></path></svg>
-        </label>
+  </div>
+    <div class="card">
+      <div class="content">
+        <div class="title">Personal edition</div>
+        <div class="price">$39.99</div>
+        <div class="description"><img src="d5l8xhhl.png" alt=""></div>
       </div>
-      <button>
-        Buy now
-      </button>
-</div>
 
+    <button>
+      Buy now
+    </button>
+</div>
+<div class="card">
+  <div class="content">
+    <div class="title">Personal edition</div>
+    <div class="price">$39.99</div>
+    <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+  </div>
+</div>
+  <div class="card">
+    <div class="content">
+      <div class="title">Personal edition</div>
+      <div class="price">$39.99</div>
+      <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+    </div>
+  </div>
+    <div class="card">
+      <div class="content">
+        <div class="title">Personal edition</div>
+        <div class="price">$39.99</div>
+        <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+      </div>
+
+    <button>
+      Buy now
+    </button>
+</div>
 
    
 </main>
+
 </body>
 </html>
