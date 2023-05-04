@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+       /* *{
+            border: 1px solid red;
+        }*/
+         body{
+            margin: 0;
+            padding: 0;
+        background-color: #171717;
+
+        }
+         .header{
+         
+         height: 150px;
+         background-color: #DDD;
+        padding: 0%;
+     }
+     footer{
+        height: 150px;
+         background-color: #DDD;
+        padding: 0%;
+     }
+     main{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
+
+     .nav_bar{
+         position: relative;
+        top: 60%;
+        width: 40%;
+        margin-left: 5%;
+         display: flex;
+         
+     }
+     .nav_bar a:hover {
+            background-color:#171717;
+            color: #DDD;
+        }
+        nav a{
+            color: black;
+            text-decoration: none;
+            
+        }
+        h1{
+            margin: 0;
+            width: 20%;
+            padding-left: 8%;
+            position: relative;
+            top: 10%;
+            left: 35%;
+            color: goldenrod;
+        }
+        .subnav {
+            float: left;
+            overflow: hidden;
+        }
+        /*
+        .subnav .subnavbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }*/
+        
+        .navbar a:hover,
+        .subnav:hover .subnavbtn {
+            background-color: red;
+        }
+        
+        .subnav-content {
+            display: none;
+            
+            justify-content: space-between;
+            position: absolute;
+            left: 0;
+            background-color: red;
+            width: 50%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .subnav-content a {
+            float: left;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .subnav-content a:hover {
+            background-color: #eee;
+            color: black;
+        }
+        
+        .subnav:hover .subnav-content {
+            display: block;
+        }
+        .card {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 25%;
+  height: 5%;
+  padding: 20px 1px;
+  margin: 10px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(33,150,243,.4),0 4px 6px -4px rgba(33,150,243,.4);
+  border-radius: 10px;
+  background-color: #6B6ECC;
+  background:#171717/*linear-gradient(45deg, #04051dea 0%, #2b566e 100%)*/;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content .price {
+  color: goldenrod;
+  font-weight: 800;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+}
+
+.content .description {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.content .title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color:goldenrod/* rgba(255, 255, 255, 0.64)*/;
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.Buy {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(33 150 243);
+  border-radius: 0.5rem;
+  width: 90%;
+  text-shadow: 0px 4px 18px #2c3442;
+}
+
+
+.Buy:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.Buy:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>My Market</h1>
+        <nav class="nav_bar">
+            
+            <a href="My Market.html">&nbsp;Home &nbsp;&nbsp;</a>
+            <a href="Register.html">&nbsp; Register &nbsp;</a>
+            <div class="subnav">
+                <button class="subnavbtn" style=" background-color:#171717; color: #DDD;">Product 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="subnav-content">
+            <a href="#link1">Cloths &nbsp;</a>
+            <a href="#link2">Electronics&nbsp;</a>
+            <a href="#link3">Cosmotics</a>
+            
+        </div>
+            </div>
+        </nav>
+    </header>
+    <main >
+        <div class="card">
+            <div class="content">
+              <div class="title">Personal edition</div>
+              <div class="price">$39.99</div>
+              <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+            </div>
+            <button class="Buy">
+              Buy now
+            </button>
+          </div>
+            <div class="card">
+              <div class="content">
+                <div class="title">Personal edition</div>
+                <div class="price">$39.99</div>
+                <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+              </div>
+              <button class="Buy">
+                Buy now
+              </button>
+            </div>
+              <div class="card">
+                <div class="content">
+                  <div class="title">Personal edition</div>
+                  <div class="price">$39.99</div>
+                  <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+                </div>
+          
+                <button class="Buy">
+                    Buy now
+                  </button>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="title">Personal edition</div>
+              <div class="price">$39.99</div>
+              <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+            </div>
+            <button class="Buy">
+                Buy now
+              </button>
+          </div>
+            <div class="card">
+              <div class="content">
+                <div class="title">Personal edition</div>
+                <div class="price">$39.99</div>
+                <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+              </div>
+              <button class="Buy">
+                Buy now
+              </button>
+            </div>
+              <div class="card">
+                <div class="content">
+                  <div class="title">Personal edition</div>
+                  <div class="price">$39.99</div>
+                  <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+                </div>
+                
+          
+                <button class="Buy">
+                    Buy now
+                  </button>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="title">Personal edition</div>
+              <div class="price">$39.99</div>
+              <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+            </div>
+            <button class="Buy">
+                Buy now
+              </button>
+          </div>
+            <div class="card">
+              <div class="content">
+                <div class="title">Personal edition</div>
+                <div class="price">$39.99</div>
+                <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+              </div>
+              <button class="Buy">
+                Buy now
+              </button>
+            </div>
+              <div class="card">
+                <div class="content">
+                  <div class="title">Personal edition</div>
+                  <div class="price">$39.99</div>
+                  <div class="description"><img src="d5l8xhhl.png" alt=""></div>
+                </div>
+                
+          
+                <button class="Buy">
+                    Buy now
+                  </button>
+          </div>
+    </main>
+    <footer>
+        <h2>Welcome</h2>
+    </footer>
+</body>
+</html>
