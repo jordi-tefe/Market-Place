@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- Site Metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <link rel="stylesheet" href="css/style.css" />
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   </head>
+
+
+
+   <body id="about" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+     
+
+      <div class="wrapper">
+      <nav id="sidebar">
+         <div class="menu_section">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="services.html">Services</a></li>
+               <li><a href="contact.html">Contact us</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div id="content">
+         <!-- Start header -->
+         <header class="top-header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-6">
+                     <div class="logo_main">
+                        <a href="index.html"><img src="images/main_logo.png" /></a>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"><img src="images/menu_icon.png"></button>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- End header -->
+
+        
+         <!-- Start Footer -->
+         <footer class="footer-box">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="full">
+                        <div class="heading_main text_align_center white_fonts margin-bottom_30">
+                           <h2>Contact us</h2>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  
+                  <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
+                     <div class="full footer_blog f_icon_1">
+                         <p>Address<br><small>151 post office Street,<br> District 10,<br>Adama, Ethiopia</small></p>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
+                     <div class="full footer_blog f_icon_2">
+                        <p>Phone<br><small>+251 96 922 0162<br>+251 905 333 333<br>Monday - Sunday<br>08:00 am - 06:00 pm</small></p>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
+                     <div class="full footer_blog f_icon_3">
+                         <p>Email<br><small>support@onlinemarketting.com<br>24 X 7 online support</small></p>
+                     </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 col-sm-6 white_fonts">
+                     <div class="full footer_blog_last">
+                         <p>Social media</p>
+                         <p>
+                           <ul>
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                           </ul>
+                         </p>
+                     </div>
+                  </div>
+              
+               </div>
+            </div>
+         </footer>
+         <!-- End Footer -->
+         <div class="footer_bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <p class="crp">© Copyrights 2023 Digital Marketting</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
+     
+      
+      <script>
+         $(document).ready(function() {
+           $('#sidebarCollapse').on('click', function() {
+             $('#sidebar, #content').toggleClass('active');
+             $('.collapse.in').toggleClass('in');
+             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+           });
+         });
+      </script>
+      
+   </body>
+</html>
