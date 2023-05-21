@@ -20,7 +20,7 @@
          .header{
          
          height: 150px;
-         background-color: #DDD;
+         background-color: #40414f;
         padding: 0%;
      }
      footer{
@@ -180,6 +180,220 @@
   -webkit-transition: all 0.25s;
   box-shadow: none;
 }
+/*Additional for search bar*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  position: relative;
+  left: 30%;
+}
+
+.input {
+  max-width: 190px;
+  height: 50%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #1f1f2c;
+  caret-color: #f7f7f8;
+  color: #fff;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+  transition: all .2s ease;
+}
+
+.input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.input:focus {
+  border: 2px solid #a970ff;
+  background-color: #0e0e10;
+}
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(42, 42, 45, 1);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  width: 100%;
+  min-height: 300px;
+  max-height: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
+  clear: both;
+  
+}
+footer .footer-wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 9%;
+  color: white;
+}
+.widgetFooter {
+  width: calc(85% / 3);
+  height: auto;
+  float: left;
+  padding: 2.5%;
+  text-align: left;
+}
+h4.uppercase {
+  text-transform: uppercase;
+}
+ul#footerUsefulLink,
+ul#footerMediaLinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+ul#footerUsefulLink li,
+ul#footerMediaLinks li {
+  cursor: pointer;
+  /* transition: border-bottom 3s ease-in; */
+}
+ul#footerUsefulLink li:hover .usefulLinksIcons,
+ul#footerUsefulLink li:hover a {
+  color: #00ced1;
+  /* border-bottom: 1px solid red; */
+}
+ul#footerMediaLinks li:hover span.fb,
+ul#footerMediaLinks li:hover a.fb {
+  color: #3b5998;
+}
+ul#footerMediaLinks li:hover span.twit,
+ul#footerMediaLinks li:hover a.twit {
+  color: #1da1f2;
+}
+ul#footerMediaLinks li:hover span.insta,
+ul#footerMediaLinks li:hover a.insta {
+  color: #ffc838;
+}
+ul#footerMediaLinks li:hover span.git,
+ul#footerMediaLinks li:hover a.git {
+  color: #f1502f;
+}
+
+div#footerLogo img {
+  width: 50%;
+  margin: 25% 0;
+}
+
+div.footerCopy {
+  clear: both;
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 800px) {
+  footer .footer-wrap {
+    width: 100%;
+    padding: 0;
+  }
+  .widgetFooter:not(:nth-of-type(2)) {
+    width: calc(90% / 2);
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .widgetFooter:nth-of-type(2) {
+    display: none;
+  }
+  div.footerCopy {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 600px) {
+  .widgetFooter:not(:nth-of-type(2)) {
+    text-align: left;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    min-height: auto;
+  }
+  .widgetFooter:not(:nth-of-type(2)) {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  ul#footerUsefulLink,
+  ul#footerMediaLinks {
+    display: flex;
+  }
+  ul#footerUsefulLink li,
+  ul#footerMediaLinks li {
+    float: left;
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  ul#footerUsefulLink li a,
+  ul#footerMediaLinks li a {
+    display: none;
+  }
+  ul#footerUsefulLink li:hover,
+  ul#footerUsefulLink li:hover .usefulLinksIcons,
+  ul#footerUsefulLink li:hover a {
+    color: white;
+    background-color: #00ced1;
+  }
+  ul#footerMediaLinks li.media1:hover,
+  ul#footerMediaLinks li:hover span.fb,
+  ul#footerMediaLinks li:hover a.fb {
+    background-color: #3b5998;
+    color: white;
+  }
+  ul#footerMediaLinks li.media2:hover,
+  ul#footerMediaLinks li:hover span.twit,
+  ul#footerMediaLinks li:hover a.twit {
+    background-color: #1da1f2;
+    color: white;
+  }
+  ul#footerMediaLinks li.media3:hover,
+  ul#footerMediaLinks li:hover span.insta,
+  ul#footerMediaLinks li:hover a.insta {
+    background-color: #ffc838;
+    color: white;
+  }
+  ul#footerMediaLinks li.media4:hover,
+  ul#footerMediaLinks li:hover span.git,
+  ul#footerMediaLinks li:hover a.git {
+    background-color: #f1502f;
+    color: white;
+  }
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
     </style>
 </head>
 <body>
@@ -201,6 +415,12 @@
         </div>
             </div>
         </nav>
+        <div class="container">
+          <input type="text" name="text" class="input" placeholder=" Search products">
+          <button class="search__btn">
+            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
     </header>
     <main >
         <div class="card">
@@ -300,7 +520,78 @@
           </div>
     </main>
     <footer>
-        <h2>Welcome</h2>
+      <div class="footer-wrap">
+
+        <div class="widgetFooter">
+          <h4 class="uppercase">useful links</h4>
+          <ul id="footerUsefulLink">
+            <li title="About US">
+              <span class="usefulLinksIcons">
+                <i class="far fa-id-card"></i>
+              </span> <!-- HERE ADD THE USEFUL LINKS WHEN FINISHING, DON'T YOU FORGET KHALID :() -->
+              <a href="ABOUTUS.HTML">&nbsp;About us</a>
+            </li>
+            <li title="Our Team">
+              <span class="usefulLinksIcons">
+                <i class="far fa-handshake"></i>
+              </span>
+              <a>&nbsp;Our team</a>
+            </li>
+            
+            <li title="Contact Us">
+              <span class="usefulLinksIcons">
+                <i class="far fa-envelope"></i>
+              </span>
+              <a target="_blank" href="mailto:khalidkhelil19@gmail.com">&nbsp;Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+<!-- THE LOGO IN BETWEEN -->
+        <div class="widgetFooter" id="footerLogo">
+          <img src="" alt="Logo">
+        </div>
+
+
+        <div class="widgetFooter">
+          <h4 class="uppercase">Social media links</h4>
+          <ul id="footerMediaLinks">
+            <li class="media1" title="Facebook">
+              <span class="mediaLinksIcons fb">
+                <i class="fab fa-facebook-square"></i>
+              </span>
+              <a class="fb" target="_blank">&nbsp;facebook</a>
+            </li>
+            <li class="media2" target="_blank" title="Twitter">
+              <span class="mediaLinksIcons twit">
+                <i class="fab fa-twitter-square"></i>
+              </span>
+              <a class="twit" target="_blank" href="https://www.Twitter.com/khalidkhelil">&nbsp;Twitter</a>
+            </li>
+            <li class="media3"  title="Instagram">
+              <span class="mediaLinksIcons insta">
+                <i class="fab fa-instagram"></i>
+              </span>
+              <a class="insta" target="_blank" href="https://www.instagram.com/khalid.khelil">&nbsp;instagram</a>
+            </li>
+            <li class="media4" title="Github">
+              <span class="mediaLinksIcons git">
+                <i class="fab fa-github-alt"></i>
+              </span>
+              <a target="_blank" class="git" href="https://www.github.com/khalidkhelil">&nbsp;Github</a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+
+
+      <div class="footerCopy">
+        <div class="inb">
+          <p style="padding:5px; line-height: 10px; word-spacing: 1.5px; letter-spacing: 2px; " >Copyrights<sup>&copy;</sup> 2023. All Rights Reserved. <br> Developed with <i class="fas fa-heart" style="color: rgb(222, 27, 27);"></i> by <a target="_blank" href="" style="text-decoration: none; color: rgb(144, 144, 229);">OUR TEAM</a></p>
+        </div>
+      </div>
     </footer>
 </body>
 </html>
