@@ -21,7 +21,19 @@ overflow-x: hidden;
 main{
   flex-wrap: wrap;
 }*/
-
+#Welcome{
+  position:relative;
+  left: 35%;
+  color: goldenrod;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+#Welcome:hover{
+  box-shadow: inset;
+  
+  text-shadow: rgb(38, 39, 33);
+  scale: 1.2;
+}
 .nav_bar{
     position: relative;
    top: 60%;
