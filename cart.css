@@ -133,9 +133,21 @@ body{
   margin-top: 10px;
   position: sticky;
   bottom: 0;
+  background-color: #026d0285;
+  clear: both;
+  padding: 3px;
+  border-radius: 2px;
 }
 
+.sidebar .delete-cart button{
+  position: sticky;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.645);
+}
 
+.sidebar button:hover{
+  background-color:rgb(206, 17, 17)
+}
 
 
 

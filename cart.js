@@ -95,3 +95,10 @@ function displaycart(){
 
     
 }
+
+
+function deleteAllItems() {
+    cart = [];
+    displaycart();
+  }
+  
