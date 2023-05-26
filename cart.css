@@ -327,6 +327,10 @@ footer .footer-wrap {
   padding: 2.5%;
   text-align: left;
 }
+
+.right{
+  float:right;
+}
 h4.uppercase {
   text-transform: uppercase;
 }
@@ -337,7 +341,7 @@ ul#footerMediaLinks {
   padding: 0;
   line-height: 40px;
   text-transform: capitalize;
-}
+} 
 ul#footerUsefulLink li,
 ul#footerMediaLinks li {
   cursor: pointer;
