@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <style>
-        .form {
+
+body{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
+  gap: 15px;
+  margin-top: 50px;
+  max-width: 450px;
+  width:400px;
   background-color: #fff;
-  padding: 20px;
   border-radius: 20px;
   position: relative;
+  padding: 35px;
+  box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .title {
   font-size: 28px;
   color: royalblue;
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  margin-bottom: 2px;
+  justify-content: center;
+  
 }
 
 .title::before,.title::after {
@@ -34,8 +51,10 @@
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  left: 0px;
   background-color: royalblue;
+  display: block;
+  align-content: flex-start;
+  right: calc(70% - 16px); 
 }
 
 .title::before {
@@ -47,7 +66,7 @@
 .title::after {
   width: 18px;
   height: 18px;
-  animation: pulse 1s linear infinite;
+  animation: pulse 1.5s linear infinite;
 }
 
 .message, .signin {
@@ -61,18 +80,15 @@
 
 .signin a {
   color: royalblue;
+  text-decoration: none;
+  background-color: #e2eff0;
+  border-radius: 3px;
 }
 
 .signin a:hover {
   text-decoration: underline royalblue;
 }
-/*
-.flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
-}
-*/
+
 .form label {
   position: relative;
 }
@@ -83,6 +99,7 @@
   outline: 0;
   border: 1px solid rgba(105, 105, 105, 0.397);
   border-radius: 10px;
+  
 }
 
 .form label .input + span {
@@ -92,7 +109,7 @@
   color: grey;
   font-size: 0.9em;
   cursor: text;
-  transition: 0.3s ease;
+  transition: 0.5s ease-in-out;
 }
 
 .form label .input:placeholder-shown + span {
@@ -100,17 +117,24 @@
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,.form label .input:valid + span {
+.form label .input:focus + span, .form label .input:valid + span {
   top: 30px;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 600;
+  opacity: .8;
 }
 
 .form label .input:valid + span {
-  color: green;
+  color: rgba(0, 128, 0, 0.681);
 }
 
+/*
+.form label.error span {
+  color: red;
+}
+*/
 .submit {
+
   border: none;
   outline: none;
   background-color: royalblue;
@@ -118,7 +142,7 @@
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
-  transform: .3s ease;
+  transform: .3s ease-in-out;
 }
 
 .submit:hover {
@@ -138,37 +162,65 @@
 }
     </style>
 </head>
+
+
 <body>
     <form class="form">
         <p class="title">Register </p>
-        <p class="message">Signup now and get full access to our app. </p>
+        <p class="message">Sign up now and get full access to our app. </p>
            
             <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Firstname</span>
+                <input required  type="text" class="input" >
+                <span>First name</span>
             </label>
     
-           <!-- <label>
-                <input required="" placeholder="" type="text" class="input">
-                <span>Lastname</span>
-            </label>-->
+            <label>
+                <input required  type="text" class="input">
+                <span>Last name</span>
+            </label>  
         
                 
         <label>
-            <input required="" placeholder="" type="email" class="input">
+            <input required type="email" class="input">
             <span>Email</span>
         </label> 
             
         <label>
-            <input required="" placeholder="" type="password" class="input">
+            <input required type="password" id="password" class="input">
             <span>Password</span>
         </label>
         <label>
-            <input required="" placeholder="" type="password" class="input">
-            <span>Confirm password</span>
+            <input required type="password" id="confirm_password" class="input">
+            <span class="error">Confirm password</span>
         </label>
-        <button class="submit">Submit</button>
-        <p class="signin">Already have an acount ? <a href="Loginpage.html">Signin</a> </p>
+        <button class="submit">Sign Up</button>
+        <p class="signin">Already have an account ? <a href="Loginpage.html">Sign In</a> </p>
     </form>
+<!--
+
+  to be updated later
+
+
+    <script>
+
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm_password');
+const confirmLabel = document.querySelector('label:contains("Confirm password")');
+
+function checkPasswordMatch() {
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    confirmLabel.classList.add('error');
+  } else {
+    confirmLabel.classList.remove('error');
+  }
+}
+
+passwordInput.addEventListener('input', checkPasswordMatch);
+confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+
+
+
+    </script>
+-->
 </body>
 </html>
