@@ -72,7 +72,7 @@ function displaycart(){
     let j = 0, total=0;
     document.getElementById("count").innerHTML=cart.length;
     if(cart.length==0){
-        document.getElementById('cartItem').innerHTML = "Your cart is empty";
+        document.getElementById('cartItem').innerHTML = " Your cart is empty";
         document.getElementById("total").innerHTML = "$ "+0+".00";
     }
     else{
@@ -82,7 +82,7 @@ function displaycart(){
             total=total+price;
             document.getElementById("total").innerHTML = "$ "+total+".00";
             return(
-                `<div class='cart-item' ">
+                `<div class='cart-item' >
                 <div class='row-img'>
                     <img class='rowimg' src=${image}>
                 </div>
