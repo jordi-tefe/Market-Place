@@ -1,36 +1,36 @@
 const product = [
     {
         id: 0,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/z-flip.webp',
         title: 'Z Flip Foldable Mobile',
         price: 120,
     },
     {
         id: 1,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/airpods-pro.jpg',
         title: 'Air Pods Pro',
         price: 60,
     },
     {
         id: 2,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/dslr-camera.jpg',
         title: '250D DSLR Camera',
         price: 230,
     },
     {
         id: 3,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/iphone14.jpg',
         title: 'Smart phone iphone14',
         price: 100,
     },{
         id: 4,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/mhd.jpg',
         title: 'MHD Camera',
         price: 230,
     },
     {
         id: 5,
-        image: 'image/d5l8xhhl.png',
+        image: 'image/iphone12.jpg',
         title: 'iPhones 12',
         price: 100,
     }
@@ -42,7 +42,9 @@ document.getElementById('root').innerHTML = categories.map((item)=>
 {
     var {image, title, price} = item;
     return(
-        `<div class='box'>
+        `<div class='box' style="position:relative; margin-top: 100px;
+        margin-bottom:0px;
+    ">
             <div class='img-box'>
                 <img class='images' src=${image}></img>
             </div>
@@ -80,7 +82,7 @@ function displaycart(){
             total=total+price;
             document.getElementById("total").innerHTML = "$ "+total+".00";
             return(
-                `<div class='cart-item'>
+                `<div class='cart-item' ">
                 <div class='row-img'>
                     <img class='rowimg' src=${image}>
                 </div>
