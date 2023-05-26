@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-h2{
-        text-align: center;
-        color: #223142;
-    }
+
 
 
     html {
@@ -18,31 +15,48 @@ h2{
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-image:linear-gradient(black 0%,black 20%,rgb(12, 5, 5) 28%,rgb(171, 157, 157) 70%) ;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
-
-
 
 img{
     border-radius: 50%;
 }
 
 .about-section {
-      background-color: #283747;
+      background-color: #ffffff;
       color: white;
+      
+
+    }
+
+    .about-section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
     }
 
 
 .about-section p {
-      margin-bottom: 20px;
+      margin: 10px;
+      margin-bottom: 0px;
       text-align:left;
       padding: 10px;
+      line-height: 1.5;
     }
+
 
 .stalk{
   text-align: center;
+ 
 }
+
+h2{
+        text-align: center;
+        color: #223142;
+    }
 
 
 .row {
@@ -50,11 +64,16 @@ img{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto; /* Center horizontally */
+  
 }
 
 .column {
-  width: 33.33%; /* Adjust the width as needed */
+  background-color: #1a78e344;
+  width: 33.33%;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px;
+  max-height: 350px;
 }
 
 
@@ -62,7 +81,7 @@ img{
   padding: 50px;
   text-align: center;
   background-color:#283747;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .container {
@@ -80,7 +99,7 @@ img{
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #000;
   text-align: center;
   cursor: pointer;
@@ -96,6 +115,7 @@ img{
 
 footer{
   font-size: small;
+  margin-top: 30px;
 }
 
 
@@ -115,7 +135,7 @@ footer{
 
 
     <div class="about-section">
-        <h1>The Website Name</h1>
+        <h1>The Market</h1>
         
         <p>Welcome to our vibrant online marketplace based in Ethiopia, where the world of possibilities awaits you! At our virtual emporium, we curate an eclectic assortment of unique and extraordinary products that cater to your every whim and desire. From fashion-forward apparel and captivating home decor to cutting-edge gadgets and captivating collectibles, our diverse range of offerings ensures there's something special for everyone.</p>
         <p>We pride ourselves on being more than just a marketplace; we are a community of passionate individuals who share a love for discovery, creativity, and exceptional experiences. Our dedicated team scours the globe, handpicking the finest treasures to present to you, ensuring that each item encapsulates the essence of craftsmanship and innovation.</p>
@@ -130,9 +150,9 @@ footer{
 
 
 
-<div class="about-section stalk">
+<div class=" stalk">
   <h1>The Dream Group</h1>
-  <p>Enjoy The Stalking</p>
+  <p>Enjoy The Stalking &#128513</p>
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
@@ -141,39 +161,40 @@ footer{
     <div class="row">
         <div class="column">
           <div class="card">
-            <img style="width:100px; height:100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Erick_Sermon_%289288240438%292.jpg/1200px-Erick_Sermon_%289288240438%292.jpg" alt="khalid khelil" style="width:25%">
+            <img style="width:100px; height:100px;" src="image/khalid.jpg" alt="khalid khelil" style="width:33%">
             <div class="container">
               <h2>Khalid</h2>
-              <p class="title">Teacher &; Co-Founder</p>
+              <p class="title">Teacher &amp; Co-&nbsp;Founder</p>
               <p>Our Analyst</p>
-              <p style="word-wrap:break-word;">khalidkhelil19@gmail.com</p>
-              <p><button class="button">Contact</button></p>
+              <a href="mailto:khalidkhelil19@gmail.com"><button class="button">Contact</button></a>
             </div>
           </div>
         </div>
       
           <div class="column">
           <div class="card">
-            <img style="width:100px; height:100px;" src="https://th.bing.com/th/id/OIP.AoJcmS7hOj-N8JXsMrLpgQHaE8?pid=Api&rs=1" alt="yealem mezmur" style="width:50%">
+            <img style="width:100px; height:100px;" src="image/iphone12.jpg" alt="yealem mezmur" style="width:33%">
             <div class="container">
               <h2>Yealem</h2>
-              <p class="title">Co-founder &; Designer</p>
+              <p class="title">Co-&nbsp;Founder &amp; Designer</p>
               <p>Our designer</p>
-              <p>yealemmezmur19@gmail.com</p>
-              <p><button class="button">Contact</button></p>
+              
+              <a href="mailto:yealemmezmur19@gmail.com"><button class="button">Contact</button></a>
             </div>
           </div>
         </div> 
           
         <div class="column">
           <div class="card">
-            <img style="width:100px; height:100px;"  src="https://th.bing.com/th/id/OIP.h82r6DD_L16dGGpV7pn1aAHaKb?w=179&h=252&c=7&o=5&pid=1.7" alt="John" style="width:25%">
+            <img style="width:100px; height:100px;"  src="image/airpods-pro.jpg" alt="Yordanos teferi" style="width:33%">
             <div class="container">
-              <h2>Ian</h2>
-              <p class="title">Implementor &; Co-founder</p>
+              <h2>Yordanos</h2>
+              <p class="title">Analyst &amp; Co-&nbsp;Founder</p>
               <p>Our designer</p>
-              <p>yordanosteferi19@gmail.com</p>
-              <p><button class="button">Contact</button></p>
+              
+              
+              <a href="mailto:yordanosteferi19@gmail.com"><button class="button">Contact</button></a>
+                
             </div>
           </div>
         </div>
