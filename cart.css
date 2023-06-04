@@ -6,7 +6,7 @@
 }
 
 .header {
-  height: 100px;
+  height: 20%;
   background-color: rgba(16, 15, 15, 0.94);
 }
 
@@ -39,24 +39,29 @@ body {
     0 4px 6px -4px rgba(248, 248, 245, 0.966);
 }
 .nav_bar {
-  background-color: #28323cf0;
+  /* background-color: #28323cf0; */
   display: flex;
   padding: 9px;
   align-items: flex-start;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
+  justify-content: space-between;
   position: sticky;
   top: 0px;
+  left: 5%;
   z-index: 100;
+  width: 25%;
 }
 
 .nav_bar a:hover {
-  border: 1px white solid;
+  /* border: 1px white solid; */
   border-radius: 3px;
-  color: #ddd;
+  color: black;
+  background-color: goldenrod;
 }
 nav a {
   color: rgb(244, 235, 235);
   text-decoration: none;
+  border-radius: 5%;
 }
 .bottom > p,
 h2 {
@@ -151,7 +156,7 @@ h2 {
   background-color: #6fc5ff;
   background-size: cover;
   background-position: center;
-  height: 75vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -165,6 +170,7 @@ h2 {
 .main-photo p {
   color: white;
   font-size: large;
+  
 }
 
 .btn {
@@ -250,7 +256,7 @@ h2 {
  }
 
 
-button {
+.button {
   width: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -266,11 +272,11 @@ button {
   border-radius: 0.5rem;
   text-shadow: 0px 4px 18px #2c3442;
 }
-button:hover {
+.button:hover {
   background-color: #6fc5ff;
   box-shadow: 0 0 20px #6fc5ff50;
 }
-button:active {
+.button:active {
   background-color: #3d94cf;
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
@@ -463,4 +469,56 @@ div.footerCopy {
 a {
   text-decoration: none;
   color: white;
+}
+/*Additional for search bar*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  position: relative;
+  left: 30%;
+}
+
+.input {
+  max-width: 190px;
+  height: 90%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #fafafc;
+  caret-color: #f7f7f8;
+  color: #0a0808;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+  transition: all .2s ease;
+}
+
+.input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.input:focus {
+  border: 2px solid #a3fc3e;
+  background-color: #ffffff;
+}
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgb(206, 206, 247);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 90%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: #00FF00;
 }

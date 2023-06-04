@@ -37,8 +37,19 @@ const product = [
 ];
 const categories = [...new Set(product.map((item)=>
     {return item}))]
+    document.getElementById('Input').addEventListener('keyup', (e) => {
+        const searchData = e.target.value.toLowerCase();
+        const filteredData = categories.filter((item) => {
+            return (
+                item.title.toLowerCase().includes(searchData)
+            )
+        })
+        displayItem(filteredData)
+    });
+    const displayItem = (items) => {
+   
     let i=0;
-document.getElementById('root').innerHTML = categories.map((item)=>
+document.getElementById('root').innerHTML = items.map((item)=>
 {
     var {image, title, price} = item;
     return(
@@ -51,12 +62,15 @@ document.getElementById('root').innerHTML = categories.map((item)=>
         <div class='bottom'>
         <p>${title}</p>
         <h2>$ ${price}.00</h2>`+
-        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
+        "<button class='button' onclick='addtocart("+(i++)+")'>Add to cart</button>"+
         `</div>
         </div>`
     )
 }).join('')
+};
+displayItem(categories);
 
+   
 var cart =[];
 
 function addtocart(a){
@@ -96,9 +110,27 @@ function displaycart(){
     
 }
 
-
 function deleteAllItems() {
     cart = [];
     displaycart();
   }
   
+//   // Define the function that filters the items
+// function myFunction() {
+//     // Declare variables
+//     var input, filter, boxes, p, i, txtValue;
+//     input = document.getElementById("myInput");
+//     filter = input.value.toUpperCase();
+//     boxes = document.getElementsByClassName("box");
+    
+//     // Loop through all boxes, and hide those who don't match the search query
+//     for (i = 0; i < boxes.length; i++) {
+//       p = boxes[i].getElementsByTagName("p")[0];
+//       txtValue = p.textContent || p.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         boxes[i].style.display = "";
+//       } else {
+//         boxes[i].style.display = "none";
+//       }
+//     }
+//   }
