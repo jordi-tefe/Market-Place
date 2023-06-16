@@ -25,10 +25,7 @@
     <nav id="navbar">
       <!--add the logo later -->
 
-      <img
-        src="https://www.nexusmalls.com/MallOfAmritsar/wp-content/uploads/2020/08/brandlogo_79-1.jpg"
-        alt="Nykaa logo"
-      />
+      <div><a href="../My Market.html" target="_blank"><img src="../image/logo.jpg" style="z-index: 1000; border-radius: 50%; width: 75px; margin: 5px;" alt="logo"></a> </div>&nbsp;
 
       <div>
         <h1>PAYMENT</h1>
@@ -90,14 +87,11 @@
             PAY NOW
           </button>
         </form>
+        <p id="suc"></p>
       </div>
 
       <!-- container3 -->
       <div id="container3">
-        <div class="edit">
-          <p>Items in your Bag</p>
-          <p>Edit</p>
-        </div>
         <!-- Grand total section -->
         <div id="total">
           <!-- amount1-->
@@ -109,27 +103,12 @@
             <p>Shipping Charge</p>
             <p>Free</p>
           </div>
-          <div class="flex2">
-            <p>Discount</p>
-            <p>0$</p>
-          </div>
-          <div class="flex3">
-            <p>Use Reward Points</p>
-            <a href="">APPLY</a>
-          </div>
           <div class="cartsum2">
             <p>Grand Total</p>
             <p class="changing1">0$</p>
           </div>
         </div>
         <!-- address space -->
-        <div id="addspace">
-          <div>
-            <h4>SHIPPING ADDRESS</h4>
-            <a href="" style="color: rgb(201, 8, 8)">CHANGE</a>
-          </div>
-          <div id="customerAdd"><!-- append addres through script here --></div>
-        </div>
       </div>
     </div>
 
@@ -157,5 +136,16 @@
       </div>
     </div>
     <!--footer end-->
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        let x = document.getElementById('btn');
+        x.addEventListener('click', () => {
+          document.getElementById('suc').innerHTML = "Success!";
+        });
+      });
+    </script>
+    
   </body>
 </html>

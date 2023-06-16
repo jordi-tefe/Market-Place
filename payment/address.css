@@ -6,6 +6,7 @@
 }
 a{
     text-decoration: none;
+    color: black;
    
 }
 body{
@@ -73,9 +74,7 @@ body{
    margin-top:10px;
    margin-bottom: 10px;
 }
-#navbar>div:nth-child(3){
-    border-bottom: 3px solid rgb(37, 36, 37); 
-}
+
 
 /* narbar end */
 
@@ -205,21 +204,6 @@ form>input{
 }
 /* container 3 */
 
-.edit{
-   
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-}
-.edit>p:first-child{
-    color: #fea838;
-    cursor: pointer;
-    font-size: 16px;
-}
 
 #cartDetail{
     width: 100%;

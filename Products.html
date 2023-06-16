@@ -18,7 +18,8 @@
     </head>
     <body>
         <header class="header">
-            <h1 style="align-items: center;position: relative; left: 40%;width: 20%;">My Market</h1>
+          <div class="logo-container" style="z-index: 1000; position: fixed;"><a href="My Market.html"><img src="image/logo.jpg" style="z-index: 1000; border-radius: 50%; width: 75px; margin: 5px;" alt="logo"></a> </div>&nbsp;
+            <h1 class="header-text" style=" width: 20%;">My Market</h1>&nbsp;
            
             <div class="container">
               <input type="text" name="text" class="input" id="Input" placeholder=" Search products">
@@ -28,9 +29,9 @@
             </div>
             <nav class="nav_bar">
                 
-                <a href="My Market.html">&nbsp;Home &nbsp;&nbsp;</a>
+                <a href="My Market.html">&nbsp; Home &nbsp;</a>
                 <a href="register.php">&nbsp; Register &nbsp;</a>
-                <a href="Loginpage.html">&nbsp; Login &nbsp;</a>
+                <a href="../login/login.php">&nbsp; Login &nbsp;</a>
                 <a href="#root">&nbsp; Explore &nbsp;</a>
                
             </nav>
@@ -40,7 +41,10 @@
 
 
         <div class="subnav">
-          <div class="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></i><p id="count">0</p></div>
+          <a href="../payment/payment.html"><div class="cart"><i class="fa fa-cart-plus" aria-hidden="true"></i></i><p id="count">0</p></div>
+        </a> 
+          
+          
           <div class="containercart">
             <!-- <div id="root"></div> -->
             <div class="sidebar">
@@ -57,7 +61,7 @@
 
         <div class="main-photo" >
         <p>Anything you want</p> <br><br><br>
-        <a target="_blank" href="ABOUTUS.html" class="btn">Learn more</a>  add the aboutus link later
+        <a target="_blank" href="ABOUTUS.html" class="btn">Learn more</a> 
 
         </div>
         

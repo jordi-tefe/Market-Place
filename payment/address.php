@@ -26,7 +26,22 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO addresses (country, names, phone_number, code, addresses)
         VALUES ('$country', '$fname', '$number', '$code', '$address')";
     $conn->query($sql);
+
+
+
+    if ($conn->affected_rows > 0) {
+        // Redirect to the success page
+        header("Location: place.html");
+    } else {
+        // Redirect to an error page
+        header("Location: error.html");
+    }
 }
+
+
+
+
+
 $conn->close();
 ?>
 
@@ -51,7 +66,7 @@ $conn->close();
 <body>
     <!-- navbar -->
     <nav id="navbar">
-        <img src="https://www.nexusmalls.com/MallOfAmritsar/wp-content/uploads/2020/08/brandlogo_79-1.jpg" alt="Nykaa logo" />
+        <div class="logo-container" style="position: fixed;"><a href="#"><img src="../image/logo.jpg" style="z-index: 1000; border-radius: 50%; width: 75px; margin: 5px;" alt="logo"></a> </div>&nbsp;
 
         <div>
             <h1 class="pink">ADDRESS</h1>
@@ -59,10 +74,6 @@ $conn->close();
             <p></p>
         </div>
 
-        <div>
-            <h1><a href="payment.html"> PAYMENT</a></h1>
-            <p>finalize</p>
-        </div>
     </nav>
     <!-- container below navbar -->
     <div id="container">
@@ -75,11 +86,11 @@ $conn->close();
         <div id="container2">
             <form id="form" method="post" action="address.php">
                 <label>New Address</label>
-                <input id="ethio" placeholder="Select Country" type="text" name="ethio" />
-                <input id="name" placeholder="Name" type="text" name="name" />
-                <input id="mobile" placeholder="Phone Number" type="number" name="mobile" />
-                <input id="code" placeholder="Postal Code" type="number" name="code" />
-                <input id="address" placeholder="Address" type="text" name="address" />
+                <input id="ethio" placeholder="Select Country" type="text" name="ethio" required />
+                <input id="name" placeholder="Name" type="text" name="name" required />
+                <input id="mobile" placeholder="Phone Number" type="number" name="mobile" required />
+                <input id="code" placeholder="Postal Code" type="number" name="code" required />
+                <input id="address" placeholder="Address" type="text" name="address" required />
                 <span id="checkbox"><input class="check" type="checkbox" />
                     <label>Use this as my default Shipping Address</label>
                 </span>
@@ -88,40 +99,10 @@ $conn->close();
         </div>
 
         <!-- container3 -->
-        <div id="container3">
-            <div class="edit">
-                <p>Items in your Bag</p>
-                <p>
-                    <a href="/Unit-2-Nykaa-collab/Unit-2-Nykaa-collab/cart/cart.html">
-                        Edit</a>
-                </p>
-            </div>
+        <div id="container3" style="background-color: transparent; border:none;">
 
             <!-- Grand total section -->
-            <div id="total">
-                <!-- append here -->
 
-                <div class="cartsum1">
-                    <p>Sub Total</p>
-                    <p class="changing">0$</p>
-                </div>
-                <div class="flex1">
-                    <p>Shipping Charge</p>
-                    <p>Free</p>
-                </div>
-                <div class="flex2">
-                    <p>Discount</p>
-                    <p>0$</p>
-                </div>
-                <div class="flex3">
-                    <p>Use Reward Points</p>
-                    <a href="">APPLY</a>
-                </div>
-                <div class="cartsum2">
-                    <p>Grand Total</p>
-                    <p class="changing1">0$</p>
-                </div>
-            </div>
         </div>
     </div>
     <!-- page footer -->
