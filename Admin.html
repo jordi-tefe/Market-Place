@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Page</title>
+    <style>
+        /* *{
+            border: 2px solid red;
+        } */
+        body{
+            background-color: rgb(194, 183, 169);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scrollbar-highlight-color: black;
+        }
+        .form_Admin{
+            display: flex;
+            margin-top: 8%;
+            flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            width: 50%;
+            background-color: aliceblue;
+            padding: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Admin Page</h1>
+
+    <form class="form_Admin">
+       
+  
+  <!-- <label for="category">Category:</label>
+  <input type="text" id="category" name="category"> -->
+  
+  
+  <label >Image of product</label><br>
+  <input type="file" accept="Image/*" id="imageA" name="image"><br>
+
+  <label for="productName">Product name:</label>
+  <input type="text" id="productName" name="productName">
+  <label for="price">Price:</label>
+  <input type="number" id="price" name="priceA"> <br>
+        <button type="button" onclick="addProduct()">Add Product</button>
+      </form>
+
+      <form action="" class="form_Admin">
+        <label for="">Enter the unwanted Product title</label>
+       
+        <input type="text" id="productName"><br>
+        <button type="button" onclick="deleteProduct()">Add Product</button>
+        
+        
+      </form>
+      <script>
+        
+
+const product = [
+    {
+        // id: 0,
+        image: 'image/z-flip.webp',
+        title: 'Z Flip Foldable Mobile',
+        price: 120,
+    },
+    {
+        // id: 1,
+        image: 'image/airpods-pro.jpg',
+        title: 'Air Pods Pro',
+        price: 60,
+    },
+    {
+        // id: 2,
+        image: 'image/dslr-camera.jpg',
+        title: '250D DSLR Camera',
+        price: 230,
+    },
+    {
+        // id: 3,
+        image: 'image/iphone14.jpg',
+        title: 'Smart phone iphone14',
+        price: 100,
+    },{
+        // id: 4,
+        image: 'image/mhd.jpg',
+        title: 'MHD Camera',
+        price: 230,
+    },
+    {
+        // id: 5,
+        image: 'image/iphone12.jpg',
+        title: 'iPhones 12',
+        price: 100,
+    },
+];
+
+// function deleteProduct() {
+//   let productName = document.getElementById("productName").value;
+//   product = product.filter(product => product.title !== productName);
+//   alert("Product deleted successfully!");
+// //   console.log(products); // print the updated products array
+// }
+
+
+        function addProduct() {
+  // Get the values from the input fields
+  let productName = document.getElementById("productName").value;
+//   let category = document.getElementById("category").value;
+  let price = document.getElementById("priceA").value;
+  let image = document.getElementById("imageA").value;
+  
+  // Create a new product object with the input values
+  let newProduct = {
+    image: image,
+    title: productName,
+    // category: category,
+    price: price,
+    
+  };
+  
+  // Add the new product to the array of existing products
+  product.push(newProduct);
+  
+  
+  alert("Product added successfully!");
+}
+      </script>
+      <!-- <script src="cart.js"></script> -->
+</body>
+</html>

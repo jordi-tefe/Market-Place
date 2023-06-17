@@ -5,7 +5,12 @@
         <!-- <link rel="stylesheet" href="product.css"> -->
         
         <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
-        <title>Products</title>
+        <link
+      rel="icon"
+      href="../Market-Place/image/ብራንድ1.jpg"
+      type="image/x-icon"
+    />
+        <title>ብራንድ</title>
         <style>
           /* *{
             border: 2px solid red;
@@ -17,8 +22,9 @@
         </style>
     </head>
     <body>
+      
         <header class="header">
-            <h1 style="align-items: center;position: relative; left: 40%;width: 20%;">My Market</h1>
+            <h1 style="align-items: center;position: relative; left: 40%;width: 20%;">ብራንድ <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
            
             <div class="container">
               <input type="text" name="text" class="input" id="Input" placeholder=" Search products">
@@ -40,7 +46,7 @@
 
 
         <div class="subnav">
-          <div class="cart"><a href="cart.html"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></i><p id="count">0</p></div>
+          <div class="cart"><a href="../Market-Place/payment/payment.html"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></i><p id="count">0</p></div>
           <div class="containercart">
             <!-- <div id="root"></div> -->
             <div class="sidebar">
@@ -50,7 +56,7 @@
                     <h3 style="color: rgb(255, 255, 255);">Total</h3>
                     <h2 id="total">$ 0.00</h2>    
                 </div>
-               <div class="delete-cart"><button onclick="deleteAllItems()">Empty Cart</button></div> 
+               <div class="delete-cart"><button onclick="deleteAllItems()"><i class='fa-solid fa-trash'>Empty Cart</i></button></div> 
             </div>
         </div>
               </div>
@@ -60,11 +66,8 @@
         <a target="_blank" href="ABOUTUS.html" class="btn">Learn more</a>  add the aboutus link later
 
         </div>
-        
-       
-       
-        <main style="background-color: rgb(26, 25, 23); border: 1px dashed rgb(26, 25, 23);"> 
-        <div id="root"></div>
+        <main style="background-color: #ffffff;"> 
+        <div  id="root"></div>
     </main>
         
 
