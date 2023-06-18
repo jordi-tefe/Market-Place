@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login</title>
-    <style>
-*{
+
+/* *{
   width:100%;
   height:100%;
-}
-body{
+} */
+.Login_body{
   margin: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+position: absolute;
+width: 100%;
+height: 285%;
+top: 0%;
+margin:0 0;
+/* left: 35%; */
+ 
 }
   
 .form_container {
@@ -161,34 +161,4 @@ body{
   text-decoration: underline;
 }
 
-    </style>
-</head>
-
-<body>
-    <form class="form_container">
-
-        <div class="logo_container"> 
-          <p class="basket"><i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i></p>
-        </div>
-        <div class="title_container">
-          <p class="title">Login to your Account</p>
-          <span class="subtitle">Get started with our app, just Login and enjoy the experience.</span>
-        </div>
-        <br>
-        <div class="input_container">
-          <label class="input_label" for="email_field">Email</label>
-          <p class="icon-holder"><i class="fa fa-envelope" aria-hidden="true"></i></p>
-          <input placeholder="name@email.com" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field" required>
-        </div>
-        <div class="input_container">
-          <label class="input_label" for="password_field">Password</label> 
-          <p class="icon-holder"><i class="fa fa-key" aria-hidden="true"></i></p>
-          <input placeholder="Password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field" required>
-        </div>
-        <button title="Sign In" type="submit" class="sign-in_btn">
-          <span>Sign In</span></button>
-          <div id="signup"><p class="note"><br>New to the Website ? <a class="signup" href="Register.html">Sign Up</a> </p></div>
-        
-      </form>
-</body>
-</html>
+    

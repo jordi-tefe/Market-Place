@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="Loginpage.css">
         <!-- <link rel="stylesheet" href="product.css"> -->
         
         <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
@@ -36,7 +37,7 @@
                 
                 <a href="My Market.html">&nbsp;Home &nbsp;&nbsp;</a>
                 <a href="register.php">&nbsp; Register &nbsp;</a>
-                <a href="Loginpage.html">&nbsp; Login &nbsp;</a>
+                <!-- <a href="Loginpage.html">&nbsp; Login &nbsp;</a> -->
                 <a href="#root">&nbsp; Explore &nbsp;</a>
                
             </nav>
@@ -46,7 +47,7 @@
 
 
         <div class="subnav">
-          <div class="cart"><a href="../Market-Place/payment/payment.html"><i class="fa fa-cart-plus" aria-hidden="true"></i></a></i><p id="count">0</p></div>
+          <div class="cart"><button id="payment_icon"><i class="fa fa-cart-plus" aria-hidden="true" ></i></button><p id="count">0</p></div>
           <div class="containercart">
             <!-- <div id="root"></div> -->
             <div class="sidebar">
@@ -69,13 +70,49 @@
         <main style="background-color: #ffffff;"> 
         <div  id="root"></div>
     </main>
-        
+        <div class="Login_body">
+          
+          <form class="form_container">
+            <button style="position: relative;left: 45%;top: 0; margin: 0 0;" id="dis_Login"><i class="fa fa-times-circle-o fa-2x" aria-hidden="true"></i></button>
+            <div class="logo_container"> 
+              <p class="basket"><i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i></p>
+            </div>
+            <div class="title_container">
+              <p class="title">Login to your Account</p>
+              <span class="subtitle">Get started with our app, just Login and enjoy the experience.</span>
+            </div>
+            <br>
+            <div class="input_container">
+              <label class="input_label" for="email_field">Email</label>
+              <p class="icon-holder"><i class="fa fa-envelope" aria-hidden="true"></i></p>
+              <input placeholder="name@email.com" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field" required>
+            </div>
+            <div class="input_container">
+              <label class="input_label" for="password_field">Password</label> 
+              <p class="icon-holder"><i class="fa fa-key" aria-hidden="true"></i></p>
+              <input placeholder="Password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field" required>
+            </div>
+            <button title="Sign In" type="submit" class="sign-in_btn" >
+              <a href="..//Market-Place/payment/payment.html">Sign In</a></button>
+              <div id="signup"><p class="note"><br>New to the Website ? <a class="signup" href="Register.html">Sign Up</a> </p></div>
+            
+          </form>
+        </div>
 
 
 
 <a href="#"><Back class="back-top">Back to top</div></a>
 
- 
+ <script>
+
+  document.getElementById('payment_icon').addEventListener("click",function(){
+    document.querySelector('.Login_body').style.display='flex';
+  })
+  
+  document.getElementById('dis_Login').addEventListener("click",function(){
+    document.querySelector('.Login_body').style.display='none';
+  })
+ </script>
 
 
 
@@ -153,5 +190,6 @@
             </div>
           </footer>
         <script src="cart.js"></script>
+
     </body>
 </html>
